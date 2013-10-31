@@ -1,7 +1,7 @@
-{
+﻿{
     "name": "grunt-ember-i18n-include",
-    "description": "The best Grunt plugin ever.",
-    "version": "0.1.0",
+    "description": "This is a helper task for Ember.I18n that let you easily split your language files into several per language that are then combined using grunt. ",
+    "version": "0.1.1",
     "homepage": "https://github.com/karl-sjogren/grunt-ember-i18n-include",
     "author": {
         "name": "Karl-Johan Sjögren",
