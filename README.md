@@ -1,4 +1,4 @@
-# grunt-ember-i18n-include
+# grunt-ember-i18n-include [![Build Status](https://travis-ci.org/karl-sjogren/grunt-ember-i18n-include.png?branch=master)](https://travis-ci.org/karl-sjogren/grunt-ember-i18n-include)
 
 This is a helper task for [Ember.I18n](https://github.com/jamesarosen/ember-i18n) that let you easily split your language files into several per language that are then combined using grunt. 
 
