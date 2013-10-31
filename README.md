@@ -1,6 +1,6 @@
 # grunt-ember-i18n-include
 
-> The best Grunt plugin ever.
+This is a helper task for https://github.com/jamesarosen/ember-i18n that let you easily split your language files into several per language that are then combined using grunt. 
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -15,6 +15,29 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 
 ```js
 grunt.loadNpmTasks('grunt-ember-i18n-include');
+```
+
+##Sample input/output
+
+###en.js
+```js
+Em.I18n.translations = {
+    'sidebar': '@@sidebar.js',
+    'header': 'My header'
+})
+```
+
+###en/sidebar.js
+```js
+{ 'included' : 'sidebar' }
+```
+
+###output/en.js
+```js
+Em.I18n.translations = {
+    'sidebar': { 'included' : 'sidebar' },
+    'header': 'My header'
+})
 ```
 
 ## The "ember_i18n_include" task
@@ -37,46 +60,21 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.makeItAwsome
+Type: `Boolean`
+Default value: false
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+Makes everything a tiny bit more awesome.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
 
 ```js
 grunt.initConfig({
   ember_i18n_include: {
-    options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  ember_i18n_include: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/en.js': 'app/languages/en.js'
     },
   },
 })
