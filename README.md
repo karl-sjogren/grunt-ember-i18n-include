@@ -17,29 +17,6 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-ember-i18n-include');
 ```
 
-##Sample input/output
-
-###en.js
-```js
-Em.I18n.translations = {
-    'sidebar': '@@sidebar.js',
-    'header': 'My header'
-})
-```
-
-###en/sidebar.js
-```js
-{ 'included' : 'sidebar' }
-```
-
-###output/en.js
-```js
-Em.I18n.translations = {
-    'sidebar': { 'included' : 'sidebar' },
-    'header': 'My header'
-})
-```
-
 ## The "ember_i18n_include" task
 
 ### Overview
@@ -77,6 +54,29 @@ grunt.initConfig({
       'dest/en.js': 'app/languages/en.js'
     },
   },
+})
+```
+
+###Sample input/output
+
+####en.js
+```js
+Em.I18n.translations = {
+    'sidebar': '@@sidebar.js',
+    'header': 'My header'
+})
+```
+
+####en/sidebar.js
+```js
+{ 'included' : 'sidebar' }
+```
+
+####output/en.js
+```js
+Em.I18n.translations = {
+    'sidebar': { 'included' : 'sidebar' },
+    'header': 'My header'
 })
 ```
 
