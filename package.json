@@ -1,0 +1,45 @@
+{
+    "name": "grunt-ember-i18n-include",
+    "description": "The best Grunt plugin ever.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/karl-sjogren/grunt-ember-i18n-include",
+    "author": {
+        "name": "Karl-Johan Sjögren",
+        "email": "karl-johan.sjogren@openlibrarysolutions.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/karl-sjogren/grunt-ember-i18n-include.git"
+    },
+    "bugs": {
+        "url": "https://github.com/karl-sjogren/grunt-ember-i18n-include/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/karl-sjogren/grunt-ember-i18n-include/blob/master/LICENSE-MIT"
+        }
+    ],
+    "main": "Gruntfile.js",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt-contrib-clean": "~0.4.0",
+        "grunt-contrib-nodeunit": "~0.2.0",
+        "grunt": "~0.4.1"
+    },
+    "peerDependencies": {
+        "grunt": "~0.4.1"
+    },
+    "keywords": [
+        "ember",
+        "ember-i18n",
+        "emberjs",
+        "i18n"       
+    ]
+}
