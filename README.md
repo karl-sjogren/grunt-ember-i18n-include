@@ -1,6 +1,6 @@
 # grunt-ember-i18n-include
 
-This is a helper task for https://github.com/jamesarosen/ember-i18n that let you easily split your language files into several per language that are then combined using grunt. 
+This is a helper task for [Ember.I18n](https://github.com/jamesarosen/ember-i18n) that let you easily split your language files into several per language that are then combined using grunt. 
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -82,6 +82,3 @@ Em.I18n.translations = {
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
