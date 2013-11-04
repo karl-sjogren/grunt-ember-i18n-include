@@ -1,10 +1,10 @@
-﻿{
+{
     "name": "grunt-ember-i18n-include",
     "description": "This is a helper task for Ember.I18n that let you easily split your language files into several per language that are then combined using grunt. ",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "homepage": "https://github.com/karl-sjogren/grunt-ember-i18n-include",
     "author": {
-        "name": "Karl-Johan Sjögren",
+        "name": "Karl-Johan Sj�ren",
         "email": "karl-johan.sjogren@openlibrarysolutions.com"
     },
     "repository": {
