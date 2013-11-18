@@ -32,7 +32,8 @@ module.exports = function(grunt) {
     ember_i18n_include: {
       default_options: {
         options: {
-          makeItAwesome: true
+          makeItAwesome: true,
+          verbose: false
         },
         files: {
           'tmp/en.js': 'test/fixtures/en.js'

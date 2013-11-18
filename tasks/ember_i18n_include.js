@@ -16,9 +16,9 @@ module.exports = function(grunt) {
     grunt.registerMultiTask('ember_i18n_include', 'Implements a syntax for implementing external files into a ember-i18n language file.', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            makeItAwesome: false
+            makeItAwesome: false,
+            verbose: false
         });
-        
         
         if(options.makeItAwesome){
             grunt.log.writeln("Making it Awesome!");
@@ -43,7 +43,9 @@ module.exports = function(grunt) {
             var includePath = f.src.toString().substring(0, f.src.toString().lastIndexOf(".")) + '/';
             var result = src.toString().replace(/["']@@(.*?\.js)["']/gi, function(match, p1) {
                 var filename =  "";
-                grunt.log.writeln("Found " + p1 + " in " + f.src);
+                if(options.verbose) {
+                    grunt.log.writeln("Found " + p1 + " in " + f.src);
+                }
                 if(!grunt.file.exists(includePath + p1)) {
                     return "\"Could not load file " + includePath + p1 + "\"";
                 }
@@ -58,7 +60,9 @@ module.exports = function(grunt) {
             grunt.file.write(f.dest, result);
             
             // Print a success message.
-            grunt.log.writeln('File "' + f.dest + '" created.');
+            if(options.verbose) {
+                grunt.log.writeln('File "' + f.dest + '" created.');
+            }
         });
     });
 };
