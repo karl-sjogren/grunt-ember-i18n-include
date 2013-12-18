@@ -82,3 +82,6 @@ Em.I18n.translations = {
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/karl-sjogren/grunt-ember-i18n-include/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
